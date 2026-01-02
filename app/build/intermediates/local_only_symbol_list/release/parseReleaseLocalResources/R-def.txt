@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable launch_background
+id button_clear_log
+id button_refresh_log
+id button_save
+id edittext_webhook_url
+id textview_log
+layout activity_main
+mipmap ic_launcher
+style LaunchTheme
+style NormalTheme
+style Theme.SmsForwarder
