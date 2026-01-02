@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-33:12
+ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:1:1-37:12
 MERGED from [androidx.databinding:viewbinding:8.7.0] /home/r-pechi/.gradle/caches/8.12/transforms/2e2b36a3ca24eadf7d946ddfaadd37bb/transformed/jetified-viewbinding-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /home/r-pechi/.gradle/caches/8.12/transforms/327ad653995823dea6437f314e4c98dc/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/r-pechi/.gradle/caches/8.12/transforms/f397598ab38aebc318987f48d4de36b0/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -75,8 +75,8 @@ ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidMan
 	android:name
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:6:22-74
 application
-ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:8:5-32:19
-INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:8:5-32:19
+ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:8:5-36:19
+INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:8:5-36:19
 MERGED from [com.google.android.material:material:1.11.0] /home/r-pechi/.gradle/caches/8.12/transforms/327ad653995823dea6437f314e4c98dc/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/r-pechi/.gradle/caches/8.12/transforms/327ad653995823dea6437f314e4c98dc/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/r-pechi/.gradle/caches/8.12/transforms/af6634eee48d2da4f5bbd513ca4f5a3c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -141,6 +141,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:29:17-76
 	android:name
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:29:27-74
+activity#com.example.smsforwarder_native.SettingsActivity
+ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:33:9-35:15
+	android:parentActivityName
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:34:13-86
+	android:name
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:33:19-82
 uses-sdk
 INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml

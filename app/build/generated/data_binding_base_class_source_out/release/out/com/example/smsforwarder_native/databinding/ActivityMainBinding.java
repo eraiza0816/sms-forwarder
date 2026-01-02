@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,28 +21,15 @@ public final class ActivityMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button buttonClearLog;
-
-  @NonNull
-  public final Button buttonRefreshLog;
-
-  @NonNull
-  public final Button buttonSave;
-
-  @NonNull
-  public final EditText edittextWebhookUrl;
+  public final Button buttonSettings;
 
   @NonNull
   public final TextView textviewLog;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button buttonClearLog,
-      @NonNull Button buttonRefreshLog, @NonNull Button buttonSave,
-      @NonNull EditText edittextWebhookUrl, @NonNull TextView textviewLog) {
+  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button buttonSettings,
+      @NonNull TextView textviewLog) {
     this.rootView = rootView;
-    this.buttonClearLog = buttonClearLog;
-    this.buttonRefreshLog = buttonRefreshLog;
-    this.buttonSave = buttonSave;
-    this.edittextWebhookUrl = edittextWebhookUrl;
+    this.buttonSettings = buttonSettings;
     this.textviewLog = textviewLog;
   }
 
@@ -74,27 +60,9 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_clear_log;
-      Button buttonClearLog = ViewBindings.findChildViewById(rootView, id);
-      if (buttonClearLog == null) {
-        break missingId;
-      }
-
-      id = R.id.button_refresh_log;
-      Button buttonRefreshLog = ViewBindings.findChildViewById(rootView, id);
-      if (buttonRefreshLog == null) {
-        break missingId;
-      }
-
-      id = R.id.button_save;
-      Button buttonSave = ViewBindings.findChildViewById(rootView, id);
-      if (buttonSave == null) {
-        break missingId;
-      }
-
-      id = R.id.edittext_webhook_url;
-      EditText edittextWebhookUrl = ViewBindings.findChildViewById(rootView, id);
-      if (edittextWebhookUrl == null) {
+      id = R.id.button_settings;
+      Button buttonSettings = ViewBindings.findChildViewById(rootView, id);
+      if (buttonSettings == null) {
         break missingId;
       }
 
@@ -104,8 +72,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, buttonClearLog, buttonRefreshLog,
-          buttonSave, edittextWebhookUrl, textviewLog);
+      return new ActivityMainBinding((LinearLayout) rootView, buttonSettings, textviewLog);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -24,3 +24,4 @@ SMS Forwarderは、Androidデバイスで受信したSMSメッセージを指定
 1.  このリポジトリをクローンします。
 2.  Android Studioでプロジェクトを開きます。
 3.  `app`モジュールをビルドして実行します。
+./gradlew assembleRelease

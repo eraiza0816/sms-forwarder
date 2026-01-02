@@ -3084,9 +3084,10 @@ id blocking
 id bottom
 id bounce
 id buttonPanel
-id button_clear_log
-id button_refresh_log
-id button_save
+id button_clear_log_settings
+id button_refresh_log_settings
+id button_save_webhook
+id button_settings
 id cancel_button
 id center
 id centerCrop
@@ -3416,6 +3417,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textview_log
+id textview_log_settings
 id time
 id title
 id titleDividerNoCustom
@@ -3564,6 +3566,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

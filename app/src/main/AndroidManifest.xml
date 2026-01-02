@@ -29,5 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.smsforwarder_native.SettingsActivity"
+            android:parentActivityName="com.example.smsforwarder_native.MainActivity"
+            />
     </application>
 </manifest>
