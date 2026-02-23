@@ -9,7 +9,7 @@
 コアドメインを支えるいくつかの支援的なサブドメインが存在します。
 
 -   **SMS受信 (SMS Reception):** Android OSから`SMS_RECEIVED`ブロードキャストインテントをリッスンし、SMSメッセージ（送信元、本文）を抽出する役割を担います。
--   **Webhook転送 (Webhook Forwarding):** 抽出されたSMSデータを、指定されたURLへHTTP POSTリクエストとして送信する責務を持ちます。JSONペイロードの構築や通信の実行が含まれます。
+-   **Webhook転送 (Webhook Forwarding):** 抽出されたSMSデータを、指定されたURLへHTTP POSTリクエストとして送信する責務を持ちます。JSONペイロードの構築や通信の実行が含まれます。**転送失敗時の信頼性を向上させるため、WorkManagerを利用したリトライロジックが導入されています。**
 -   **設定管理 (Configuration):** ユーザーが転送先のWebhook URLを設定し、それを永続化する機能を提供します。
 -   **ロギング (Logging):** アプリの動作状況（成功、失敗、エラー詳細）を記録し、デバッグを容易にするための機能です。
 
@@ -33,7 +33,7 @@
     -   1つのSMS受信から転送までをカプセル化する概念的な集約。
     -   ルートエンティティ: `SmsMessage`
     -   含まれるもの: `SmsMessage`、`Webhook`、転送結果（成功/失敗、HTTPステータス）。
-    -   *現状の実装では、この集約は明確なクラスとしてモデル化されておらず、`SmsReceiver`の`onReceive`メソッド内で手続き的に処理されています。*
+    -   *現状の実装では、この集約は`WorkManager`へのリクエストとしてキューに入れられ、バックグラウンドで非同期に処理されることで、より堅牢な転送処理を実現しています。*
 
 #### エンティティ (Entities)
 
@@ -57,12 +57,14 @@
 -   **UIレイヤー (Presentation Layer):**
     -   `MainActivity`: ユーザーからのWebhook URL入力を受け付け、設定を保存し、ログを表示する責務を持ちます。
 -   **アプリケーションレイヤー (Application Layer):**
-    -   `SmsReceiver`: システムからのイベントを受け取り、ドメインロジックを呼び出すアプリケーションのエントリーポイントです。
-    -   `WebhookSender`: `SmsReceiver`から指示を受け、HTTP通信を行なってWebhookへの転送処理を実行します。
+    -   `SmsReceiver`: システムからのイベントを受け取り、転送タスクを`WorkManager`に投入するアプリケーションのエントリーポイントです。
+    -   `RetryWebhookWorker`: `WorkManager`によって実行され、`WebhookSender`を呼び出して実際の転送処理を行います。転送失敗時にはリトライ処理を担い、信頼性を向上させます。
+    -   `WebhookSender`: `RetryWebhookWorker`から指示を受け、HTTP通信を行なってWebhookへの転送処理を実行します。
 -   **ドメインレイヤー (Domain Layer):**
     -   *現状、明確に分離されたドメインレイヤーは存在しません。* ドメインの知識やロジックは`SmsReceiver`と`WebhookSender`内に混在しています（例: JSONペイロードの構築ロジック）。
     -   よりDDDに近づけるなら、`SmsMessage`や`ForwardingService`のようなドメインオブジェクトを作成し、ビジネスロジックをそこに集約することが考えられます。
 -   **インフラストラクチャレイヤー (Infrastructure Layer):**
+    -   `WorkManager`: 信頼性の高いバックグラウンドタスクの実行と再試行を管理します。
     -   `HttpURLConnection`: ネットワーク通信という技術的詳細を担います。
     -   `SharedPreferences`: 設定の永続化というストレージの技術的詳細を担います。
     -   `File`: ログの永続化を担います。

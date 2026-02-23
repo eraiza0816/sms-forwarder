@@ -12,8 +12,8 @@ import java.util.Locale
 
 object WebhookSender {
 
-    suspend fun send(context: Context, urlString: String, sender: String, body: String) {
-        try {
+    suspend fun send(context: Context, urlString: String, sender: String, body: String): Boolean {
+        return try {
             val url = URL(urlString)
             val connection = url.openConnection() as HttpURLConnection
             connection.requestMethod = "POST"
@@ -31,12 +31,15 @@ object WebhookSender {
             if (responseCode >= 400) {
                 val errorStream = connection.errorStream?.bufferedReader()?.readText()
                 writeLog(context, "転送失敗: $sender (HTTP $responseCode)\nサーバーの応答: $errorStream")
+                false // Indicate failure
             } else {
                 writeLog(context, "転送成功: $sender (HTTP $responseCode)")
+                true // Indicate success
             }
 
         } catch (e: Exception) {
             writeLog(context, "転送失敗: ${e.message}")
+            false // Indicate failure
         }
     }
 }

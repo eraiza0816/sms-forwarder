@@ -4,9 +4,11 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.telephony.SmsMessage
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import androidx.work.BackoffPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.workDataOf
+import java.util.concurrent.TimeUnit
 
 class SmsReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
@@ -23,10 +25,20 @@ class SmsReceiver : BroadcastReceiver() {
                     val url = prefs.getString("webhook_url", null)
 
                     if (url != null && url.isNotEmpty()) {
-                        // Offload network request to a background thread
-                        CoroutineScope(Dispatchers.IO).launch {
-                            WebhookSender.send(context, url, sender, body)
-                        }
+                        val workRequest = OneTimeWorkRequestBuilder<RetryWebhookWorker>()
+                            .setInputData(workDataOf(
+                                "url" to url,
+                                "sender" to sender,
+                                "body" to body
+                            ))
+                            .setBackoffCriteria(
+                                BackoffPolicy.LINEAR,
+                                10,
+                                TimeUnit.MINUTES
+                            )
+                            .build()
+                        
+                        WorkManager.getInstance(context).enqueue(workRequest)
                     }
                 }
             }
