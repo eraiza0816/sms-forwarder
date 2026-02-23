@@ -1,9 +1,9 @@
-package com.example.smsforwarder_native
+package io.github.eraiza0816.sms_forwarder
 
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smsforwarder_native.databinding.ActivitySettingsBinding
+import io.github.eraiza0816.sms_forwarder.databinding.ActivitySettingsBinding
 import java.io.File
 
 class SettingsActivity : AppCompatActivity() {

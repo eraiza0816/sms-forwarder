@@ -105,14 +105,14 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/r-pechi/.gradle/cache
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:12:9-50
 	android:name
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:9:9-38
-receiver#com.example.smsforwarder_native.SmsReceiver
+receiver#io.github.eraiza0816.sms_forwarder.SmsReceiver
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:13:9-20:20
 	android:exported
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:15:13-36
 	android:permission
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:16:13-66
 	android:name
-		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:14:13-71
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:14:13-74
 intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:17:13-19:29
 	android:priority
@@ -121,7 +121,7 @@ action#android.provider.Telephony.SMS_RECEIVED
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:18:17-82
 	android:name
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:18:25-79
-activity#com.example.smsforwarder_native.MainActivity
+activity#io.github.eraiza0816.sms_forwarder.MainActivity
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:22:9-31:20
 	android:launchMode
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:25:13-43
@@ -130,7 +130,7 @@ ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidMan
 	android:configChanges
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:26:13-59
 	android:name
-		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:23:13-72
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:23:13-75
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:27:13-30:29
 action#android.intent.action.MAIN
@@ -141,12 +141,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:29:17-76
 	android:name
 		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:29:27-74
-activity#com.example.smsforwarder_native.SettingsActivity
+activity#io.github.eraiza0816.sms_forwarder.SettingsActivity
 ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:33:9-35:15
 	android:parentActivityName
-		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:34:13-86
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:34:13-89
 	android:name
-		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:33:19-82
+		ADDED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml:33:19-85
 uses-sdk
 INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/r-pechi/workspace/sms-forwarder-android/app/src/main/AndroidManifest.xml
@@ -267,7 +267,7 @@ ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transfo
 		ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-permission#com.example.smsforwarder_native.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#io.github.eraiza0816.sms_forwarder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
@@ -277,7 +277,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-uses-permission#com.example.smsforwarder_native.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#io.github.eraiza0816.sms_forwarder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /home/r-pechi/.gradle/caches/8.12/transforms/76cb5f478ac5d63280d05a66fb73c0cf/transformed/core-1.12.0/AndroidManifest.xml:26:22-94

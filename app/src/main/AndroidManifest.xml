@@ -11,7 +11,7 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.SmsForwarder">
         <receiver
-            android:name="com.example.smsforwarder_native.SmsReceiver"
+            android:name="io.github.eraiza0816.sms_forwarder.SmsReceiver"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">
             <intent-filter android:priority="999">
@@ -20,7 +20,7 @@
         </receiver>
 
         <activity
-            android:name="com.example.smsforwarder_native.MainActivity"
+            android:name="io.github.eraiza0816.sms_forwarder.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:configChanges="orientation|screenSize">
@@ -30,8 +30,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.smsforwarder_native.SettingsActivity"
-            android:parentActivityName="com.example.smsforwarder_native.MainActivity"
+        <activity android:name="io.github.eraiza0816.sms_forwarder.SettingsActivity"
+            android:parentActivityName="io.github.eraiza0816.sms_forwarder.MainActivity"
             />
     </application>
 </manifest>

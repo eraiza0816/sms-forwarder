@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.smsforwarder_native"
+    namespace = "io.github.eraiza0816.sms_forwarder"
     compileSdk = 34
 
     compileOptions {
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.smsforwarder_native"
+        applicationId = "io.github.eraiza0816.sms_forwarder"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

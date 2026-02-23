@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.smsforwarder_native.app-mergeReleaseResources-29:/values/values.xml",
+            "outputFile": "io.github.eraiza0816.sms_forwarder.app-mergeReleaseResources-29:/values/values.xml",
             "map": [
                 {
                     "source": "/home/r-pechi/.gradle/caches/8.12/transforms/af6634eee48d2da4f5bbd513ca4f5a3c/transformed/constraintlayout-2.0.1/res/values/values.xml",

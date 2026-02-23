@@ -1,4 +1,4 @@
-package com.example.smsforwarder_native
+package io.github.eraiza0816.sms_forwarder
 
 import android.content.Context
 import android.os.Environment

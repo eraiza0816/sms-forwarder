@@ -1,14 +1,10 @@
 [
     {
-        "merged": "/home/r-pechi/.gradle/daemon/8.12/com.example.smsforwarder_native.app-mergeReleaseResources-30:/layout/activity_main.xml",
-        "source": "/home/r-pechi/.gradle/daemon/8.12/com.example.smsforwarder_native.app-main-32:/layout/activity_main.xml"
+        "merged": "io.github.eraiza0816.sms_forwarder.app-mergeReleaseResources-30:/layout/activity_main.xml",
+        "source": "io.github.eraiza0816.sms_forwarder.app-main-32:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.smsforwarder_native.app-mergeReleaseResources-30:/layout/activity_settings.xml",
-        "source": "com.example.smsforwarder_native.app-main-32:/layout/activity_settings.xml"
-    },
-    {
-        "merged": "com.example.smsforwarder_native.app-mergeReleaseResources-30:/layout/activity_main.xml",
-        "source": "com.example.smsforwarder_native.app-main-32:/layout/activity_main.xml"
+        "merged": "io.github.eraiza0816.sms_forwarder.app-mergeReleaseResources-30:/layout/activity_settings.xml",
+        "source": "io.github.eraiza0816.sms_forwarder.app-main-32:/layout/activity_settings.xml"
     }
 ]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.smsforwarder_native"
+    package="io.github.eraiza0816.sms_forwarder"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -15,20 +15,20 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <permission
-        android:name="com.example.smsforwarder_native.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="io.github.eraiza0816.sms_forwarder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.smsforwarder_native.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="io.github.eraiza0816.sms_forwarder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="com.example.smsforwarder_native.MyApplication"
+        android:name="io.github.eraiza0816.sms_forwarder.MyApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
         android:label="SMS Forwarder"
         android:theme="@style/Theme.SmsForwarder" >
         <receiver
-            android:name="com.example.smsforwarder_native.SmsReceiver"
+            android:name="io.github.eraiza0816.sms_forwarder.SmsReceiver"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS" >
             <intent-filter android:priority="999" >
@@ -37,7 +37,7 @@
         </receiver>
 
         <activity
-            android:name="com.example.smsforwarder_native.MainActivity"
+            android:name="io.github.eraiza0816.sms_forwarder.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:launchMode="singleTop" >
@@ -48,12 +48,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.smsforwarder_native.SettingsActivity"
-            android:parentActivityName="com.example.smsforwarder_native.MainActivity" />
+            android:name="io.github.eraiza0816.sms_forwarder.SettingsActivity"
+            android:parentActivityName="io.github.eraiza0816.sms_forwarder.MainActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.smsforwarder_native.androidx-startup"
+            android:authorities="io.github.eraiza0816.sms_forwarder.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
